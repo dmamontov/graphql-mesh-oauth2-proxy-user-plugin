@@ -1,0 +1,7 @@
+tsconfig.json
+dist
+.eslintrc
+.prettierrc.cjs
+yarn.lock
+node_modules
+.mesh

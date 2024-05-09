@@ -1,0 +1,7 @@
+/node_modules/
+.bob/
+.idea/
+artifacts/
+dist/
+.npmrc
+yarn-error.log
