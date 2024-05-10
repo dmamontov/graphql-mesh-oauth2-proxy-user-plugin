@@ -1,6 +1,6 @@
 {
   "name": "@dmamontov/graphql-mesh-oauth2-proxy-user-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Dmitry Mamontov",
   "type": "module",
   "repository": {
@@ -43,6 +43,7 @@
     "@envelop/generic-auth": "^7.0.0",
     "@graphql-mesh/string-interpolation": "^0.5.3",
     "@graphql-mesh/types": "^0.97.5",
+    "apollo-server-errors": "*",
     "graphql": "*",
     "jwt-decode": "^4.0.0"
   },

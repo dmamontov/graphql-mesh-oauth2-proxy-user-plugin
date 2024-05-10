@@ -1,3 +1,4 @@
+import { AuthenticationError } from 'apollo-server-errors';
 import { jwtDecode } from 'jwt-decode';
 import { useGenericAuth, type ResolveUserFn, type ValidateUserFn } from '@envelop/generic-auth';
 import { type MeshPlugin, type MeshPluginOptions } from '@graphql-mesh/types';
@@ -69,7 +70,7 @@ const validateUser = (
         }
 
         if (!params?.user) {
-            throw new Error('Unauthenticated');
+            throw new AuthenticationError('Unauthenticated.');
         }
     };
 };
