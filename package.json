@@ -1,6 +1,6 @@
 {
   "name": "@dmamontov/graphql-mesh-oauth2-proxy-user-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Dmitry Mamontov",
   "type": "module",
   "repository": {

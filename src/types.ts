@@ -4,6 +4,7 @@ export interface Oauth2ProxyUserConfig {
     idKey: string;
     nameKey: string;
     rolesKey: string;
+    defaultName?: string;
 }
 
 export interface Oauth2ProxyUser {

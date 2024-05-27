@@ -42,11 +42,20 @@ const resolveUserFn = (
         }
 
         const idKey = evaluate(options.idKey).toString();
-        const nameKey = evaluate(options.nameKey).toString();
         const rolesKey = evaluate(options.rolesKey).toString();
+        const nameKey = evaluate(options.nameKey).toString();
+
+        let name: string | undefined;
+
+        if (Object.keys(token).includes(nameKey)) {
+            name = token[nameKey];
+        } else if (options.defaultName) {
+            name = options.defaultName;
+        }
+
         if (
             !Object.keys(token).includes(idKey) ||
-            !Object.keys(token).includes(nameKey) ||
+            !name ||
             !Object.keys(token).includes(rolesKey)
         ) {
             return undefined;
@@ -54,7 +63,7 @@ const resolveUserFn = (
 
         return {
             id: token[idKey],
-            name: token[nameKey],
+            name,
             roles: token[rolesKey],
             properties: token,
         } as Oauth2ProxyUser;
